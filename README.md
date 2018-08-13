@@ -16,8 +16,27 @@ cat R48_CAE85ANXX_ATTACTCG-TATAGCCT_L002_R2.fastq R48_CAE85ANXX_ATTACTCG-TATAGCC
 
 3) Used Trinity to quality trim and normalise the raw data, and assemble all samples by individual prawn.
 
-4-6) Used BinPacker, Bridger and IDBA-tran on the normalised reads produced by Trinity for assembly.
+4) to 6. Used BinPacker, Bridger and IDBA-tran on the normalised reads produced by Trinity for assembly.
+
+7) Concatenated all assemblies, including the mulitple k-mer from IDBA-tran, into a single assembly.
+
+8) Used Evidential Gene on all collated contigs to merge redundant contigs. Then concatenated okay and alternative contigs toghether for maximal completeness.
+
+```
+module load cd-hit
+module load blast
+perl /Software/evigene/scripts/rnaseq/trformat.pl combined_individual.fa
+nohup perl /Software/evigene/scripts/prot/tr2aacds.pl -mrnaseq combined_individual_rn.fa -NCPU=25 -MAXMEM=80000 -logfile
+cat combined_individual_rn.okay.fa combined_individual_rn.okalt.fa > combined_multi_evigen.fa
+```
+
+9) Used TransFuse with a ID of 0.98 to further reduce and cluster the okay and alterantive contigs produced by Evidential Gene.
+
+10) Removed contigs <300 bp.
+
+## Read mapping and counting
 
 
 
+## Differential gene expression analysis
 
