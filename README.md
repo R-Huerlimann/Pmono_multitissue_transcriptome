@@ -30,9 +30,13 @@ nohup perl /Software/evigene/scripts/prot/tr2aacds.pl -mrnaseq combined_individu
 cat combined_individual_rn.okay.fa combined_individual_rn.okalt.fa > combined_multi_evigen.fa
 ```
 
-9) Used TransFuse with a ID of 0.98 to further reduce and cluster the okay and alterantive contigs produced by Evidential Gene.
+9) Further reduced and clusterer the okay and alterantive contigs produced by Evidential Gene using TransFuse with a ID of 0.98  through the 09_transfuse_on_evigen.sh script
 
-10) Removed contigs <300 bp.
+10) Removed contigs <300 bp using removesmalls.pl
+
+https://github.com/drtamermansour/p_asteroides/blob/master/scripts/removesmalls.pl
+
+11) Validated the assembly using TransRate V1.0.1 and BUSCO41 V2 using the arthropoda_odb9 database 
 
 ## Read mapping and counting
 
