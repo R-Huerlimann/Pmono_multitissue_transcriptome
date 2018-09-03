@@ -14,9 +14,9 @@ cat R48_CAE85ANXX_ATTACTCG-TATAGCCT_L002_R2.fastq R48_CAE85ANXX_ATTACTCG-TATAGCC
 
 2) Collectively ran Rcorrector on all files by executing the 02_Rcorrector.sh script.
 
-3) Used Trinity to quality trim and normalise the raw data, and assemble all samples by individual prawn.
+3) Used Trinity to quality trim and normalise the raw data, and assemble all samples by individual prawn using  	03_trinity_start.sh.
 
-4) to 6. Used BinPacker, Bridger and IDBA-tran on the normalised reads produced by Trinity for assembly.
+4) to 6. Used BinPacker (04_binpacker_start.sh), Bridger (05_bridger_start.sh) and IDBA-tran (06_idbatran_start.sh) on the normalised reads produced by Trinity for assembly.
 
 7) Concatenated all assemblies, including the mulitple k-mer from IDBA-tran, into a single assembly.
 
@@ -39,8 +39,11 @@ https://github.com/drtamermansour/p_asteroides/blob/master/scripts/removesmalls.
 11) Validated the assembly using TransRate V1.0.1 and BUSCO41 V2 using the arthropoda_odb9 database 
 
 ## Read mapping and counting
+12) Since the initial trimming with Trimmomatic in Trinity included palindrome trimming, which discards fully overlapping reads, Trimmomatic was run again on the Rcorrected data using 12_trimming.sh, this time with palindrome trimming turned off (see Trimmomatic documentation for additional information: http://www.usadellab.org/cms/?page=trimmomatic).
 
+13) Mapped reads in parallel to assembled transcriptome using bowtie2 through script 13_bowtie_mapping_trimmed.sh.
 
+14) Carried out read counting using Corset (https://github.com/Oshlack/Corset/wiki) on tissue and larval samples separately through scripts 14_corset_tissues_trimmed.sh and 14_corset_larval_trimmed.sh.
 
 ## Differential gene expression analysis
-
+15) Loaded data into RStudio and carried out DGE using DESeq2 (https://bioconductor.org/packages/release/bioc/html/DESeq2.html).
