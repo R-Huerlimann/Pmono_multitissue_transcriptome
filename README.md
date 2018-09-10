@@ -4,11 +4,12 @@ Workflow and scripts used for the assembly of the transcriptome.
 
 
 ### Publication information
-**Preprint:** 
-Roger Huerlimann, Nicholas M Wade, Lavinia Gordon, Juan D Montenegro, Jake Goodall, Sean McWilliam, Matthew Tinning, Kirby Siemering, Erika Giardina, Dallas Donovan, Melony J Sellars, Jeff A Cowley, Kelly Condon, Greg J Coman, Mehar S Khatkar, Herman W Raadsma, Gregory Maes, Kyall R Zenger, Dean R Jerry (2018). De novo assembly, characterization, functional annotation and expression patterns of the black tiger shrimp (Penaeus monodon) transcriptome. bioRxiv, 280420; doi: https://doi.org/10.1101/280420 
+Roger Huerlimann, Nicholas M Wade, Lavinia Gordon, Juan D Montenegro, Jake Goodall, Sean McWilliam, Matthew Tinning, Kirby Siemering, Erika Giardina, Dallas Donovan, Melony J Sellars, Jeff A Cowley, Kelly Condon, Greg J Coman, Mehar S Khatkar, Herman W Raadsma, Gregory Maes, Kyall R Zenger, Dean R Jerry (2018). De novo assembly, characterization, functional annotation and expression patterns of the black tiger shrimp (Penaeus monodon) transcriptome. Scientific Reportsvolume 8, Article number: 13553 (2018); https://rdcu.be/6cYY 
 
-**Publication:**
-Accepted at Scientific Reports.
+
+
+ 
+
 
 ### Availability of raw data and assembly
 Raw short read data and transcriptome assembly are available on NCBI under the following accession numbers: BioProject: PRJNA421400, BioSamples: SAMN08741487-SAMN08741521, SRA: SRP127068 (RR6868116-SRR6868172), TRA: GGLH00000000.
